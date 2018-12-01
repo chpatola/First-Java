@@ -9,7 +9,7 @@ public class FirstTest {
 
     public static void main(String[] args) {
         //
-        int[] table = {5, 1, 3, 4, 2};
+        int[] table = {4, 1, 3, 4, 2};
         printTableasStars(table);
     }
   
