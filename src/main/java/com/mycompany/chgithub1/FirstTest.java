@@ -5,34 +5,30 @@
  */
 package com.mycompany.chgithub1;
 
-import javafx.application.Application;
-import static javafx.application.Application.launch;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.FlowPane;
-import javafx.stage.Stage;
-
-
-public class FirstTest extends Application{
-
+public class FirstTest {
 
     public static void main(String[] args) {
-        launch(args);
+        //
+        int[] table = {5, 1, 3, 4, 2};
+        printTableasStars(table);
+    }
+  
+ 
+    public static void printStars(int many) {
+        while (many > 0) {
+            System.out.print("*");
+            many = many - 1;
+        }
     }
 
-    @Override
-     public void start(Stage stage) {
-        Button buttoncommand = new Button("This is a button");
-        Label textcomponent = new Label("Text component");
-        FlowPane componentgroup = new FlowPane();
-        componentgroup.getChildren().add(buttoncommand);
-        componentgroup.getChildren().add(textcomponent);
-        
-        Scene view = new Scene(componentgroup);
-        
-        stage.setScene(view);
-        stage.show();
+    public static void printTableasStars(int[] table) {
+        //Go through the numbers in the table
+        //use the method printStars for every number
+        int index=0;
+        while(index < table.length){
+            printStars(table[index]);
+            System.out.println("");
+            index++;
+        }
     }
 }
-
